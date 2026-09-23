@@ -12,12 +12,13 @@ import Arrow from '../components/Arrow.astro';
 interface Props { language: Language; }
 const { language } = Astro.props;
 const copy = siteCopy[language];
+const base = import.meta.env.BASE_URL;
 ---
 <BaseLayout language={language} title={`${copy.title} · TU Wien`} description={copy.heroIntro}>
   <div class="site-shell">
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href={language === 'en' ? '/en/' : `/${language}/`} aria-label={copy.title}>
+        <a class="brand" href={`${base}${language === 'en' ? 'en/' : `${language}/`}`} aria-label={copy.title}>
           <span class="brand-mark" aria-hidden="true">ZDB</span>
           <span><span class="brand-name">{copy.title}</span><span class="brand-unit">{copy.unit}</span></span>
         </a>
