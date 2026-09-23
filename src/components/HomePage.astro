@@ -1,0 +1,115 @@
+---
+import type { Language } from '../data/team';
+import { siteCopy } from '../data/site';
+import { team } from '../data/team';
+import { news } from '../data/news';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import TeamCard from '../components/TeamCard.astro';
+import NewsCard from '../components/NewsCard.astro';
+import Arrow from '../components/Arrow.astro';
+
+interface Props { language: Language; }
+const { language } = Astro.props;
+const copy = siteCopy[language];
+---
+<BaseLayout language={language} title={`${copy.title} · TU Wien`} description={copy.heroIntro}>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href={language === 'en' ? '/en/' : `/${language}/`} aria-label={copy.title}>
+          <span class="brand-mark" aria-hidden="true">ZDB</span>
+          <span><span class="brand-name">{copy.title}</span><span class="brand-unit">{copy.unit}</span></span>
+        </a>
+        <nav class="header-nav" aria-label="Main navigation">
+          <a href="#about">{copy.navAbout}</a>
+          <a href="#team">{copy.navTeam}</a>
+          <a href="#news">{copy.navNews}</a>
+          <a href="#contact">{copy.navContact}</a>
+        </nav>
+        <LanguageSwitcher current={language} />
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">{copy.heroEyebrow}</p>
+            <h1>{copy.heroTitle}</h1>
+          </div>
+          <div>
+            <p class="hero-intro">{copy.heroIntro}</p>
+            <div class="focus" aria-label={copy.focusLabel}>
+              <span>{copy.openBim}</span><span>{copy.augmentedReality}</span><span>{copy.digitalProcesses}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container about-grid">
+          <h2>{copy.aboutTitle}</h2>
+          <p class="about-copy">{copy.aboutText}</p>
+        </div>
+      </section>
+
+      <section class="section" id="team">
+        <div class="container">
+          <div class="section-heading">
+            <h2>{copy.teamTitle}</h2>
+            <p>{copy.teamIntro}</p>
+          </div>
+          <div class="team-grid">
+            {team.map((member) => <TeamCard member={member} language={language} viewProfile={copy.viewProfile} />)}
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="news">
+        <div class="container">
+          <div class="section-heading">
+            <h2>{copy.newsTitle}</h2>
+            <p>{copy.newsIntro}</p>
+          </div>
+          <div class="news-grid">
+            {news.map((item) => <NewsCard item={item} language={language} readMore={copy.readMore} source={copy.source} />)}
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="eyebrow">TU Wien · E235-03</p>
+            <h2>{copy.contactTitle}</h2>
+            <p>{copy.contactText}</p>
+            <p class="address">{copy.address}</p>
+            <div class="contact-links">
+              <a href="https://www.tuwien.at/en/cee/ibb/zdb/about-us/contact" target="_blank" rel="noreferrer">{copy.contactLink} <Arrow size={16} /></a>
+              <a href="https://www.tuwien.at/en/cee/ibb/zdb" target="_blank" rel="noreferrer">{copy.officialPage} <Arrow size={16} /></a>
+            </div>
+          </div>
+          <div aria-hidden="true" class="contact-orbit">
+            <div class="orbit-line orbit-line-a"></div><div class="orbit-line orbit-line-b"></div><div class="orbit-dot dot-a"></div><div class="orbit-dot dot-b"></div><div class="orbit-core">ZDB</div>
+          </div>
+        </div>
+        {language === 'ja' && <div class="container"><p class="ai-note">{copy.aiNote}</p></div>}
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner"><span>{copy.footerNote}</span><span>© {new Date().getFullYear()} TU Wien</span></div>
+    </footer>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-orbit { position: relative; min-height: 270px; border: 1px solid var(--line); overflow: hidden; background: #f1f1ee; }
+  .orbit-line { position: absolute; border: 1px solid #c8c9c5; border-radius: 50%; transform: rotate(-24deg); }
+  .orbit-line-a { width: 440px; height: 170px; top: 55px; left: 20%; }
+  .orbit-line-b { width: 440px; height: 260px; top: 10px; left: 20%; }
+  .orbit-dot { position: absolute; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); }
+  .dot-a { top: 29%; left: 24%; }.dot-b { right: 18%; bottom: 21%; background: #a7a8a3; }
+  .orbit-core { position: absolute; top: 50%; left: 50%; display: grid; width: 76px; height: 76px; place-items: center; border: 1px solid var(--accent); border-radius: 50%; color: var(--accent); font-size: 15px; font-weight: 800; transform: translate(-50%, -50%); }
+</style>

@@ -1,0 +1,22 @@
+---
+import type { Language, TeamMember } from '../data/team';
+import Arrow from './Arrow.astro';
+
+interface Props { member: TeamMember; language: Language; viewProfile: string; }
+const { member, language, viewProfile } = Astro.props;
+---
+<article class="team-card">
+  <a class="team-card-image" href={member.profileUrl} target="_blank" rel="noreferrer" aria-label={`${viewProfile}: ${member.name}`}>
+    <img src={member.image} alt={member.name} loading="lazy" width="96" height="96" />
+    <span class="team-card-ring" aria-hidden="true"></span>
+  </a>
+  <div class="team-card-content">
+    <h3>{member.name}</h3>
+    <p class="team-card-title">{member.title[language]}</p>
+    {member.role && <p class="team-card-role">{member.role[language]}</p>}
+    <div class="team-card-links">
+      <a href={member.profileUrl} target="_blank" rel="noreferrer">{viewProfile} <Arrow size={15} /></a>
+      {member.orcid && <a class="orcid-link" href={member.orcid} target="_blank" rel="noreferrer" aria-label={`ORCID: ${member.name}`}>iD</a>}
+    </div>
+  </div>
+</article>

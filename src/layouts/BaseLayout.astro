@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+import type { Language } from '../data/team';
+import { languages } from '../data/site';
+
+interface Props {
+  language: Language;
+  title: string;
+  description: string;
+}
+
+const { language, title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang={language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {languages.map((item) => <link rel="alternate" hreflang={item.code} href={new URL(item.path, Astro.site)} />)}
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

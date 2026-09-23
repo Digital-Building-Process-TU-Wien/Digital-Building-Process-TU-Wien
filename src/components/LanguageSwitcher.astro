@@ -1,0 +1,14 @@
+---
+import type { Language } from '../data/team';
+import { languages } from '../data/site';
+
+interface Props { current: Language; }
+const { current } = Astro.props;
+---
+<nav class="language-switcher" aria-label="Language">
+  {languages.map((item) => (
+    <a class:list={{ active: item.code === current }} href={item.path} lang={item.code} aria-current={item.code === current ? 'page' : undefined}>
+      {item.code === 'ja' ? '日本語' : item.label}
+    </a>
+  ))}
+</nav>
