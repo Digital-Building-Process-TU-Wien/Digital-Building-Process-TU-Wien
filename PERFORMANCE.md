@@ -13,16 +13,16 @@
 
 | Measurement | Before optimization | After optimization |
 | --- | ---: | ---: |
-| Live page-load median (`loadEventEnd`) | 46.5 ms | 81.2 ms |
-| Live page-load runs (ms) | 164.7, 45.5, 39.2, 49.8, 46.5 | 323.3, 56.4, 81.2, 295.5, 76.9 |
-| Live LCP median (ms) | 103 ms | 222 ms |
+| Live page-load median (`loadEventEnd`) | 46.5 ms | 62.8 ms |
+| Live page-load runs (ms) | 164.7, 45.5, 39.2, 49.8, 46.5 | 185.3, 62.8, 49.8, 113.3, 62.0 |
+| Live LCP median (ms) | 103 ms | 310 ms |
 | Live CLS | 0.00 | 0.00 |
 | Lighthouse accessibility | 100 | 100 |
 | Lighthouse best practices | 100 | 100 |
 | Lighthouse SEO | 92 | 100 |
 | Lighthouse agentic browsing | 100 | 100 |
 
-The post-optimization live values come from the deployed build at commit `b4844c0`, with a cache-busting query so the browser did not reuse the baseline document. The post run has a heavier tail than the baseline, so the medians are reported as observed rather than treated as a guaranteed speedup. The five-run sample and unthrottled Chrome measurements are sensitive to GitHub Pages and network variance. The final Lighthouse audit is clean, with no failed audits.
+The post-optimization live values come from the deployed build at commit `f2ad22e`, with a cache-busting query so the browser did not reuse the baseline document. The post run has a heavier tail than the baseline, so the medians are reported as observed rather than treated as a guaranteed speedup. The five-run sample and unthrottled Chrome measurements are sensitive to GitHub Pages and network variance. The final Lighthouse audit is clean, with no failed audits.
 
 ## Changes made
 
