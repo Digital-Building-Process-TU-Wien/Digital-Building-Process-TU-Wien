@@ -37,16 +37,16 @@ export const news: NewsItem[] = [
     title: {
       en: 'New paper on openBIM-based building code compliance checks: Case study in the City of Vienna',
       de: 'Neues Paper zu openBIM-basierten Building-Code-Compliance-Checks: Fallstudie aus Wien',
-      ja: 'openBIMに基づく建築基準法のコンプライアンス検査に関する論文：ウィーン市の事例研究',
+      ja: 'openBIMに基づく建築法規への適合性確認に関する論文：ウィーン市の事例研究',
     },
     summary: {
       en: 'The paper presents a structured, process-oriented methodology for developing and validating automated code compliance checks in public-sector permit processes, illustrated through a pilot with 24 real construction projects in Vienna.',
       de: 'Das Paper stellt eine strukturierte, prozessorientierte Methodik zur Entwicklung und Validierung automatisierter Building-Code-Compliance-Checks in öffentlichen Genehmigungsprozessen vor und veranschaulicht sie anhand eines Piloten mit 24 realen Bauprojekten in Wien.',
-      ja: 'この論文では、公共部門の許可プロセスにおける自動化コンプライアンス検査の開発と検証に向けた、構造化されたプロセス重視の方法論を提示し、ウィーンの24件の実在する建設プロジェクトによる実証を示しています。',
+      ja: 'この論文では、公共部門の許可プロセスにおける自動適合性確認の開発と検証に向けた、構造化されたプロセス重視の方法論を提示し、ウィーンにある24件の実在する建設プロジェクトによる実証を示しています。',
     },
     url: 'https://repositum.tuwien.at/handle/20.500.12708/229819',
     image: '/images/news/openbim-building-code-compliance-checks.jpg',
-    imageAlt: { en: 'Title page of the paper on openBIM-based building code compliance checks', de: 'Titelseite des Papers zu openBIM-basierten Building-Code-Compliance-Checks', ja: 'openBIMに基づく建築基準法のコンプライアンス検査に関する論文の表紙' },
+    imageAlt: { en: 'Title page of the paper on openBIM-based building code compliance checks', de: 'Titelseite des Papers zu openBIM-basierten Building-Code-Compliance-Checks', ja: 'openBIMに基づく建築法規への適合性確認に関する論文の表紙' },
   },
   {
     id: 'rcc4oeag-kickoff',
@@ -55,12 +55,12 @@ export const news: NewsItem[] = [
     title: {
       en: 'RCC4ÖAG research project kick-off: automated openBIM validation in focus',
       de: 'Kick-off für das Forschungsprojekt RCC4ÖAG – Automatisierte openBIM-Prüfprozesse im Fokus',
-      ja: '研究プロジェクトRCC4ÖAG開始：自動化openBIM検証に焦点を',
+      ja: '研究プロジェクトRCC4ÖAGが始動：openBIMによる自動検証に注力',
     },
     summary: {
       en: 'RCC4ÖAG develops an open methodology for translating textual regulations and standards into machine-readable, automated openBIM validation logics with a human-in-the-loop approach.',
       de: 'RCC4ÖAG entwickelt eine offene Methodik, um textuelle Vorschriften und Normen in maschinenlesbare, automatisierte openBIM-Prüflogiken zu überführen.',
-      ja: 'RCC4ÖAGは、テキスト上の規定や規格を機械可読な自動openBIM検証ロジックに変換するオープンな方法論を開発しています。',
+      ja: 'RCC4ÖAGは、文書形式の法規・規格を機械可読なopenBIMベースの自動検証ロジックに変換するオープンな方法論を開発しています。',
     },
     url: 'https://www.tuwien.at/cee/ibb/zdb/aktuelles/news/kick-off-fuer-das-forschungsprojekt-rcc4oeag-automatisierte-openbim-pruefprozesse-im-fokus',
     image: '/images/news/rcc4oeag-kickoff.jpg',
