@@ -77,5 +77,6 @@ export const team: TeamMember[] = [
     title: { en: 'Project MA, B.Sc.', de: 'Projekt-MA, B.Sc.', ja: 'プロジェクト修士, B.Sc.' },
     image: '/images/team/gabriel-pelikan.jpg',
     profileUrl: 'https://tiss.tuwien.ac.at/person/339054.html',
+    linkedinUrl: 'https://www.linkedin.com/in/gabriel-pelikan-629059181/',
   },
 ];
