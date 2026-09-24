@@ -10,7 +10,7 @@ const image = `${base}${member.image.replace(/^\//, '')}`;
 ---
 <article class="team-card">
   <a class="team-card-image" href={member.profileUrl} target="_blank" rel="noreferrer" aria-label={`${viewProfile}: ${member.name}`}>
-    <img src={image} alt={member.name} loading="lazy" width="112" height="112" />
+    <img src={image} alt={member.name} loading="lazy" decoding="async" width="112" height="112" />
     <span class="team-card-ring" aria-hidden="true"></span>
   </a>
   <div class="team-card-content">

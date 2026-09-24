@@ -27,7 +27,7 @@ export const news: NewsItem[] = [
       ja: '2026年版はBIMcertの知識基盤を最新化し、共同翻訳によって他国での経験をハンドブックに取り入れる取り組みを紹介しています。',
     },
     url: 'https://www.tuwien.at/cee/ibb/zdb/aktuelles/news/bimcert-handbuch-2026-erschienen',
-    image: '/images/news/bimcert-handbuch-2026.jpg',
+    image: '/images/news/bimcert-handbuch-2026.webp',
     imageAlt: { en: 'Cover of the BIMcert Handbook 2026', de: 'Titelseite des BIMcert-Handbuchs 2026', ja: 'BIMcertハンドブック2026表紙' },
   },
   {
@@ -45,7 +45,7 @@ export const news: NewsItem[] = [
       ja: 'この論文では、公共部門の許可プロセスにおける自動適合性確認の開発と検証に向けた、構造化されたプロセス重視の方法論を提示し、ウィーンにある24件の実在する建設プロジェクトによる実証を示しています。',
     },
     url: 'https://repositum.tuwien.at/handle/20.500.12708/229819',
-    image: '/images/news/openbim-building-code-compliance-checks.jpg',
+    image: '/images/news/openbim-building-code-compliance-checks.webp',
     imageAlt: { en: 'Title page of the paper on openBIM-based building code compliance checks', de: 'Titelseite des Papers zu openBIM-basierten Building-Code-Compliance-Checks', ja: 'openBIMに基づく建築法規への適合性確認に関する論文の表紙' },
   },
   {
@@ -63,7 +63,7 @@ export const news: NewsItem[] = [
       ja: 'RCC4ÖAGは、文書形式の法規・規格を機械可読なopenBIMベースの自動検証ロジックに変換するオープンな方法論を開発しています。',
     },
     url: 'https://www.tuwien.at/cee/ibb/zdb/aktuelles/news/kick-off-fuer-das-forschungsprojekt-rcc4oeag-automatisierte-openbim-pruefprozesse-im-fokus',
-    image: '/images/news/rcc4oeag-kickoff.jpg',
+    image: '/images/news/rcc4oeag-kickoff.webp',
     imageAlt: { en: 'Project partners of the RCC4ÖAG project', de: 'Projektpartner:innen des Projekts RCC4ÖAG', ja: 'RCC4ÖAGプロジェクトのパートナー' },
   },
   {
@@ -81,7 +81,7 @@ export const news: NewsItem[] = [
       ja: 'TU Wienで、デジタル建築許可を巡る科学的研究、革新的な実践応用、実践的なワークショップ、交流のための3日間の会議が開催されました。',
     },
     url: 'https://www.tuwien.at/cee/ibb/zdb/aktuelles/news/digital-building-permit-konferenz-2026-an-der-tu-wien',
-    image: '/images/news/digital-building-permit-conference.jpg',
+    image: '/images/news/digital-building-permit-conference.webp',
     imageAlt: { en: 'Digital Building Process team at the conference', de: 'Team des Forschungsbereichs auf der Konferenz', ja: '会議に登壇した研究チーム' },
   },
   {
@@ -99,7 +99,7 @@ export const news: NewsItem[] = [
       ja: 'ケーススタディにより、ARを活用した建築審査が空間理解と公的許可プロセスの組織を改善できる可能性を検討しています。',
     },
     url: 'https://www.tuwien.at/cee/ibb/zdb/aktuelles/news/neues-paper-zu-augmented-reality-im-behoerdlichen-genehmigungsprozess-erschienen-1',
-    image: '/images/news/ar-review-process.jpg',
+    image: '/images/news/ar-review-process.webp',
     imageAlt: { en: 'Publication cover', de: 'Titelblatt der Publikation', ja: '論文の表紙' },
   },
   {
@@ -117,7 +117,7 @@ export const news: NewsItem[] = [
       ja: 'この論文は、従来の表形式の情報要求からIDSを生成し、馴染みのある表形式のロジックを維持する概念を提案しています。',
     },
     url: 'https://www.tuwien.at/cee/ibb/zdb/aktuelles/news/neues-paper-zur-generierung-von-information-delivery-specifications-ids-erschienen',
-    image: '/images/news/ids-generation.jpg',
+    image: '/images/news/ids-generation.webp',
     imageAlt: { en: 'Publication cover', de: 'Titelblatt der Publikation', ja: '論文の表紙' },
   },
 ];
