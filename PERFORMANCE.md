@@ -13,16 +13,16 @@
 
 | Measurement | Before optimization | After optimization |
 | --- | ---: | ---: |
-| Live page-load median (`loadEventEnd`) | 46.5 ms | Pending deployment verification |
-| Live page-load runs (ms) | 164.7, 45.5, 39.2, 49.8, 46.5 | Pending deployment verification |
-| Live LCP median (ms) | 103 ms | Pending deployment verification |
-| Live CLS | 0.00 | Pending deployment verification |
-| Lighthouse accessibility | 100 | Pending deployment verification |
-| Lighthouse best practices | 100 | Pending deployment verification |
-| Lighthouse SEO | 92 | Pending deployment verification |
-| Lighthouse agentic browsing | 100 | Pending deployment verification |
+| Live page-load median (`loadEventEnd`) | 46.5 ms | 81.2 ms |
+| Live page-load runs (ms) | 164.7, 45.5, 39.2, 49.8, 46.5 | 323.3, 56.4, 81.2, 295.5, 76.9 |
+| Live LCP median (ms) | 103 ms | 222 ms |
+| Live CLS | 0.00 | 0.00 |
+| Lighthouse accessibility | 100 | 100 |
+| Lighthouse best practices | 100 | 100 |
+| Lighthouse SEO | 92 | 100 |
+| Lighthouse agentic browsing | 100 | 100 |
 
-The post-optimization live values are intentionally left as pending until the optimized build is published. Local server measurements are not substituted because the requested verification target is the live website.
+The post-optimization live values come from the deployed build at commit `b4844c0`, with a cache-busting query so the browser did not reuse the baseline document. The post run has a heavier tail than the baseline, so the medians are reported as observed rather than treated as a guaranteed speedup. The five-run sample and unthrottled Chrome measurements are sensitive to GitHub Pages and network variance. The final Lighthouse audit is clean, with no failed audits.
 
 ## Changes made
 
