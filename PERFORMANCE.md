@@ -32,7 +32,7 @@ The post-optimization live values are intentionally left as pending until the op
 - Reduced the large openBIM news image to a 720 px-wide WebP, which is sufficient for its rendered card size and mobile layout.
 - Added intrinsic image dimensions, `decoding="async"`, and retained lazy loading for below-the-fold imagery.
 - Removed the unused Tailwind Vite integration and dependency. The site uses component-scoped/custom CSS rather than Tailwind utilities.
-- Inlined the small global stylesheet to remove the render-blocking CSS request.
+- Kept the small global stylesheet as a cacheable Astro asset instead of duplicating it in every language page.
 - Removed the redundant brand accessible name and added descriptive labels to news links, addressing the baseline Lighthouse failures.
 
 ## Asset impact
