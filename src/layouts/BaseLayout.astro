@@ -20,6 +20,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
     {languages.map((item) => <link rel="alternate" hreflang={item.code} href={new URL(`${base}${item.path.replace(/^\//, '')}`, Astro.site)} />)}
     <title>{title}</title>
   </head>
