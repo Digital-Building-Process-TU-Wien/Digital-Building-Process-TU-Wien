@@ -8,6 +8,7 @@ export interface TeamMember {
   role?: LocalizedText;
   image: string;
   profileUrl: string;
+  linkedinUrl?: string;
   orcid?: string;
 }
 
@@ -18,6 +19,7 @@ export const team: TeamMember[] = [
     role: { en: 'Head of the research unit', de: 'Leiter des Forschungsbereichs', ja: '研究領域長' },
     image: '/images/team/christian-schranz.jpg',
     profileUrl: 'https://tiss.tuwien.ac.at/fpl/person/index.xhtml?tid=36976',
+    linkedinUrl: 'https://www.linkedin.com/in/christian-schranz-tu-wien/',
     orcid: 'https://orcid.org/0000-0003-4403-5435',
   },
   {
@@ -26,6 +28,7 @@ export const team: TeamMember[] = [
     role: { en: 'Deputy head of the research unit', de: 'Stv. Leiter des Forschungsbereichs', ja: '研究領域副長' },
     image: '/images/team/harald-urban.jpg',
     profileUrl: 'https://tiss.tuwien.ac.at/fpl/person/index.xhtml?tid=253092',
+    linkedinUrl: 'https://www.linkedin.com/in/harald-urban-170a7a162/',
     orcid: 'https://orcid.org/0000-0002-6002-0762',
   },
   {
@@ -33,24 +36,28 @@ export const team: TeamMember[] = [
     title: { en: 'Senior Scientist Dipl.-Ing. Dr. techn., B.Sc.', de: 'Senior Scientist Dipl.-Ing. Dr. techn., B.Sc.', ja: 'シニアサイエンスティスト Dipl.-Ing. Dr. techn., B.Sc.' },
     image: '/images/team/simon-fischer.jpg',
     profileUrl: 'https://tiss.tuwien.ac.at/person/291973.html',
+    linkedinUrl: 'https://www.linkedin.com/in/simon-fischer-6526b4211/',
   },
   {
     name: 'Daniel Pfeiffer',
     title: { en: 'Univ.Ass. Dipl.-Ing., B.Sc.', de: 'Univ.Ass. Dipl.-Ing., B.Sc.', ja: '大学助教 Dipl.-Ing., B.Sc.' },
     image: '/images/team/daniel-pfeiffer.jpg',
     profileUrl: 'https://tiss.tuwien.ac.at/person/309547.html',
+    linkedinUrl: 'https://www.linkedin.com/in/daniel-pfeiffer-75b787239/',
   },
   {
     name: 'Konstantin Höbart',
     title: { en: 'Project assistant Dipl.-Ing., B.Sc.', de: 'Projektass. Dipl.-Ing., B.Sc.', ja: 'プロジェクト助教 Dipl.-Ing., B.Sc.' },
     image: '/images/team/konstantin-hobart.jpg',
     profileUrl: 'https://tiss.tuwien.ac.at/person/231675.html',
+    linkedinUrl: 'https://www.linkedin.com/in/konstantin-h%C3%B6bart-1b2a71135/',
   },
   {
     name: 'Patrick Loibl',
     title: { en: 'Univ.Ass. Dipl.-Ing., B.Sc.', de: 'Univ.Ass. Dipl.-Ing., B.Sc.', ja: '大学助教 Dipl.-Ing., B.Sc.' },
     image: '/images/team/patrick-loibl.jpg',
     profileUrl: 'https://tiss.tuwien.ac.at/person/300055.html',
+    linkedinUrl: 'https://www.linkedin.com/in/patrickloibl/',
   },
   {
     name: 'Anes Husic',
@@ -63,6 +70,7 @@ export const team: TeamMember[] = [
     title: { en: 'Project assistant Dipl.-Ing., B.Sc.', de: 'Projektass. Dipl.-Ing., B.Sc.', ja: 'プロジェクト助教 Dipl.-Ing., B.Sc.' },
     image: '/images/team/leo-gaishofer.jpg',
     profileUrl: 'https://tiss.tuwien.ac.at/person/333884.html',
+    linkedinUrl: 'https://www.linkedin.com/in/leogaishofer/',
   },
   {
     name: 'Gabriel Pelikan',

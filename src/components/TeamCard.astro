@@ -1,6 +1,7 @@
 ---
 import type { Language, TeamMember } from '../data/team';
 import Arrow from './Arrow.astro';
+import LinkedIn from './LinkedIn.astro';
 
 interface Props { member: TeamMember; language: Language; viewProfile: string; }
 const { member, language, viewProfile } = Astro.props;
@@ -9,7 +10,7 @@ const image = `${base}${member.image.replace(/^\//, '')}`;
 ---
 <article class="team-card">
   <a class="team-card-image" href={member.profileUrl} target="_blank" rel="noreferrer" aria-label={`${viewProfile}: ${member.name}`}>
-    <img src={image} alt={member.name} loading="lazy" width="96" height="96" />
+    <img src={image} alt={member.name} loading="lazy" width="112" height="112" />
     <span class="team-card-ring" aria-hidden="true"></span>
   </a>
   <div class="team-card-content">
@@ -18,6 +19,7 @@ const image = `${base}${member.image.replace(/^\//, '')}`;
     {member.role && <p class="team-card-role">{member.role[language]}</p>}
     <div class="team-card-links">
       <a href={member.profileUrl} target="_blank" rel="noreferrer">{viewProfile} <Arrow size={15} /></a>
+      {member.linkedinUrl && <a class="linkedin-link" href={member.linkedinUrl} target="_blank" rel="noreferrer" aria-label={`LinkedIn: ${member.name}`}><LinkedIn /></a>}
       {member.orcid && <a class="orcid-link" href={member.orcid} target="_blank" rel="noreferrer" aria-label={`ORCID: ${member.name}`}>iD</a>}
     </div>
   </div>
