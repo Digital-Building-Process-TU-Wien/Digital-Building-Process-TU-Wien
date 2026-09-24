@@ -18,9 +18,11 @@ const image = `${base}${member.image.replace(/^\//, '')}`;
     <p class="team-card-title">{member.title[language]}</p>
     {member.role && <p class="team-card-role">{member.role[language]}</p>}
     <div class="team-card-links">
+      <div class="team-card-social">
+        {member.linkedinUrl && <a class="linkedin-link" href={member.linkedinUrl} target="_blank" rel="noreferrer" aria-label={`LinkedIn: ${member.name}`}><LinkedIn /></a>}
+        {member.orcid && <a class="orcid-link" href={member.orcid} target="_blank" rel="noreferrer" aria-label={`ORCID: ${member.name}`}>iD</a>}
+      </div>
       <a href={member.profileUrl} target="_blank" rel="noreferrer">{viewProfile} <Arrow size={15} /></a>
-      {member.linkedinUrl && <a class="linkedin-link" href={member.linkedinUrl} target="_blank" rel="noreferrer" aria-label={`LinkedIn: ${member.name}`}><LinkedIn /></a>}
-      {member.orcid && <a class="orcid-link" href={member.orcid} target="_blank" rel="noreferrer" aria-label={`ORCID: ${member.name}`}>iD</a>}
     </div>
   </div>
 </article>
