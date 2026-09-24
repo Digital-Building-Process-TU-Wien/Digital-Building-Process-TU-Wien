@@ -31,6 +31,24 @@ export const news: NewsItem[] = [
     imageAlt: { en: 'Cover of the BIMcert Handbook 2026', de: 'Titelseite des BIMcert-Handbuchs 2026', ja: 'BIMcertハンドブック2026表紙' },
   },
   {
+    id: 'openbim-building-code-compliance-checks',
+    date: '2026-09-24',
+    dateLabel: { en: '24 September 2026', de: '24. September 2026', ja: '2026年9月24日' },
+    title: {
+      en: 'New paper on openBIM-based building code compliance checks: Case study in the City of Vienna',
+      de: 'Neues Paper zu openBIM-basierten Building-Code-Compliance-Checks: Fallstudie aus Wien',
+      ja: 'openBIMに基づく建築基準法のコンプライアンス検査に関する論文：ウィーン市の事例研究',
+    },
+    summary: {
+      en: 'The paper presents a structured, process-oriented methodology for developing and validating automated code compliance checks in public-sector permit processes, illustrated through a pilot with 24 real construction projects in Vienna.',
+      de: 'Das Paper stellt eine strukturierte, prozessorientierte Methodik zur Entwicklung und Validierung automatisierter Building-Code-Compliance-Checks in öffentlichen Genehmigungsprozessen vor und veranschaulicht sie anhand eines Piloten mit 24 realen Bauprojekten in Wien.',
+      ja: 'この論文では、公共部門の許可プロセスにおける自動化コンプライアンス検査の開発と検証に向けた、構造化されたプロセス重視の方法論を提示し、ウィーンの24件の実在する建設プロジェクトによる実証を示しています。',
+    },
+    url: 'https://repositum.tuwien.at/handle/20.500.12708/229819',
+    image: '/images/news/openbim-building-code-compliance-checks.jpg',
+    imageAlt: { en: 'Title page of the paper on openBIM-based building code compliance checks', de: 'Titelseite des Papers zu openBIM-basierten Building-Code-Compliance-Checks', ja: 'openBIMに基づく建築基準法のコンプライアンス検査に関する論文の表紙' },
+  },
+  {
     id: 'rcc4oeag-kickoff',
     date: '2026-05-12',
     dateLabel: { en: '12 May 2026', de: '12. Mai 2026', ja: '2026年5月12日' },
