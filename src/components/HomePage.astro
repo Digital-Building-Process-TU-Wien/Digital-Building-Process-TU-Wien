@@ -18,6 +18,9 @@ const base = import.meta.env.BASE_URL;
   <div class="site-shell">
     <header class="site-header">
       <div class="container header-inner">
+        <a class="institute-link" href="https://www.tuwien.at/en/cee/ibb/zdb" target="_blank" rel="noreferrer" aria-label="TU Wien · Bau & Umwelt · ibb">
+          <img class="institute-logo" src={`${base}images/tuwien-institute-logo.webp`} alt="TU Wien · Bau &amp; Umwelt · ibb" width="130" height="68" />
+        </a>
         <a class="brand" href={`${base}${language === 'en' ? 'en/' : `${language}/`}`} aria-label={copy.title}>
           <span class="brand-mark" aria-hidden="true">ZDB</span>
           <span><span class="brand-name">{copy.title}</span><span class="brand-unit">{copy.unit}</span></span>
@@ -47,7 +50,7 @@ const base = import.meta.env.BASE_URL;
           </div>
         </div>
         <div class="container hero-media">
-          <img src={`${base}images/tuwien-header.png`} alt="" width="1428" height="400" fetchpriority="high" />
+          <img src={`${base}images/tuwien-header.webp`} alt="" width="1440" height="402" fetchpriority="high" />
         </div>
       </section>
 
